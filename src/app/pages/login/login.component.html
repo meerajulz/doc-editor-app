@@ -2,13 +2,14 @@
     <mat-card class="login-card">
         <mat-card-header>
             <mat-card-title>
-                <mat-icon aria-hidden="false" aria-label="App icon">lock</mat-icon>
-                <!-- Icon example -->
-                Doc Easy Edit App
+                <span class="material-icons md-48">dataset</span> Easy Doc Edit Doc
             </mat-card-title>
-            <mat-card-subtitle> Sign in to access your documents </mat-card-subtitle>
         </mat-card-header>
+
         <mat-card-content>
+            <mat-card-header>
+                <mat-card-title> Sign in to access your documents </mat-card-title>
+            </mat-card-header>
             <form (ngSubmit)="onLogin()">
                 <mat-form-field appearance="fill" class="full-width">
                     <mat-label>Email</mat-label>

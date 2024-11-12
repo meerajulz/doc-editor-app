@@ -1,13 +1,21 @@
 <div class="document-editor-dialog">
     <h2>{{ isEditMode ? "Edit Document" : "Create New Document" }}</h2>
+
     <mat-form-field appearance="fill" class="full-width">
         <mat-label>Title</mat-label>
         <input matInput [(ngModel)]="document.title" placeholder="Enter document title" />
     </mat-form-field>
+
+    <!-- Date and Time Information -->
     <mat-form-field appearance="fill" class="full-width">
-        <mat-label>Content</mat-label>
-        <textarea matInput [(ngModel)]="document.content" rows="5" placeholder="Enter document content"></textarea>
+        <mat-label>Last Edited</mat-label>
+        <input matInput [value]="document.timestamp" disabled />
     </mat-form-field>
+
+    <!-- Rich Text Editor for Content -->
+    <div class="editor-container">
+        <div id="editor"></div>
+    </div>
     <button mat-raised-button color="primary" (click)="saveDocument()">
     {{ isEditMode ? "Save Changes" : "Create Document" }}
   </button>

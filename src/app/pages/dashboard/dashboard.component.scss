@@ -21,7 +21,7 @@
 }
 
 mat-sidenav {
-    width: 250px;
+    min-width: 180px;
     padding: 10px;
     display: flex;
     flex-direction: column;

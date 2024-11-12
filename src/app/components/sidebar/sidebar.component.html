@@ -1,7 +1,20 @@
-<h3>Menu</h3>
-<button mat-button (click)="addNewDocument()">
-  <mat-icon>note_add</mat-icon> + Add New
+<button mat-fab extended (click)="addNewDocument()">
+  <span class="material-icons md-48">add</span> Add New
 </button>
-<button mat-button (click)="handleOpenSettings()">
-  <mat-icon>settings</mat-icon> Settings
-</button>
+
+<mat-list role="list">
+    <mat-list-item role="listitem">
+        <mat-icon matListItemIcon>star</mat-icon>
+        <div matListItemTitle>Starred</div>
+    </mat-list-item>
+
+    <mat-list-item role="listitem">
+        <mat-icon matListItemIcon>deleted</mat-icon>
+        <div matListItemTitle>Deleted Docs</div>
+    </mat-list-item>
+
+    <mat-list-item role="listitem">
+        <mat-icon matListItemIcon>settings</mat-icon>
+        <div matListItemTitle>My Settings</div>
+    </mat-list-item>
+</mat-list>
