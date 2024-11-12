@@ -1,9 +1,14 @@
 <div class="document-list">
     <mat-card *ngFor="let doc of documents" class="document-item">
-        <mat-card-title>{{ doc.title }}</mat-card-title>
+        <mat-card-title class="title">{{ truncateTitle(doc.title) }}
+        </mat-card-title>
         <mat-card-actions>
-            <button mat-button (click)="editDocument(doc)">Edit</button>
-            <button mat-button color="warn" (click)="deleteDocument(doc)">
+            <button mat-button (click)="editDocument(doc)">
+        <span class="material-icons md-24">edit</span>
+        Edit
+      </button>
+            <button mat-button color="accent" (click)="deleteDocument(doc)">
+        <span class="material-icons md-24">delete</span>
         Delete
       </button>
         </mat-card-actions>

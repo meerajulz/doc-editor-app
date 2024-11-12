@@ -7,10 +7,14 @@
         <!-- Main Content Area -->
         <mat-sidenav-content>
             <header class="dashboard-header">
-                <h1>Dashboard</h1>
-                <mat-form-field appearance="fill">
-                    <mat-label>Search Documents</mat-label>
+                <h1>Welcome!</h1>
+                <mat-form-field class="search-field">
+                    <mat-label>Search in your documents</mat-label>
                     <input matInput [(ngModel)]="searchText" (input)="filterDocuments()" />
+                    <!-- Clear button -->
+                    <button *ngIf="searchText" matSuffix mat-icon-button aria-label="Clear" (click)="searchText = ''">
+            <mat-icon>close</mat-icon>
+          </button>
                 </mat-form-field>
             </header>
 

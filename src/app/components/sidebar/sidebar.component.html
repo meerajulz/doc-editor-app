@@ -1,19 +1,23 @@
-<button mat-fab extended (click)="addNewDocument()">
-  <span class="material-icons md-48">add</span> Add New
-</button>
+<div class="button-add">
+    <button mat-fab extended (click)="addNewDocument()">
+    <span class="material-icons md-48">add</span> Add New
+  </button>
+</div>
 
-<mat-list role="list">
-    <mat-divider [inset]="true"></mat-divider>
+<mat-list class="list" role="list">
+    <mat-divider></mat-divider>
 
     <mat-list-item role="listitem">
         <mat-icon matListItemIcon>star</mat-icon>
         <div matListItemTitle>Starred</div>
     </mat-list-item>
+    <mat-divider></mat-divider>
 
     <mat-list-item role="listitem">
         <mat-icon matListItemIcon>deleted</mat-icon>
         <div matListItemTitle>Deleted Docs</div>
     </mat-list-item>
+    <mat-divider></mat-divider>
 
     <mat-list-item role="listitem">
         <mat-icon matListItemIcon>settings</mat-icon>

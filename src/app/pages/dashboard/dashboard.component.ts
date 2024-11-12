@@ -32,7 +32,6 @@ export class DashboardComponent {
 
   selectedDocument: any = { title: '', content: '' };
   isEditMode = false;
-
   constructor(private dialog: MatDialog) {}
 
   ngOnInit() {

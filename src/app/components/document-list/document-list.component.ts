@@ -21,4 +21,8 @@ export class DocumentListComponent {
   deleteDocument(doc: any) {
     this.delete.emit(doc);
   }
+
+  truncateTitle(title: string): string {
+    return title.length > 50 ? title.substring(0, 50) + '...' : title;
+  }
 }

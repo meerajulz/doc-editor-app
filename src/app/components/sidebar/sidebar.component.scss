@@ -3,9 +3,12 @@
     display: flex;
 }
 
-mat-sidenav {
-    width: 250px;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
+.mat-list {
+    margin: 0;
+    padding: 19px 0;
+    list-style-type: none;
+}
+
+.button-add {
+    margin: 1rem;
 }
