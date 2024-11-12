@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { MATERIAL_IMPORTS } from '../../shared/material.imports';
 import { Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { LogoComponent } from 'src/app/components/logo/logo.component';
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [...MATERIAL_IMPORTS, FormsModule],
+  imports: [...MATERIAL_IMPORTS, FormsModule, LogoComponent],
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss',
 })
