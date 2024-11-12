@@ -1,11 +1,22 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MATERIAL_IMPORTS } from '../../shared/material.imports';
+import { HeaderComponent } from '../../components/header/header.component';
+import { SidebarComponent } from '../../components/sidebar/sidebar.component';
+import { DocumentListComponent } from '../../components/document-list/document-list.component';
+
 import { FormsModule } from '@angular/forms';
 @Component({
   selector: 'app-dashboard',
   standalone: true,
-  imports: [...MATERIAL_IMPORTS, FormsModule, CommonModule],
+  imports: [
+    ...MATERIAL_IMPORTS,
+    FormsModule,
+    CommonModule,
+    HeaderComponent,
+    SidebarComponent,
+    DocumentListComponent,
+  ],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.scss',
 })

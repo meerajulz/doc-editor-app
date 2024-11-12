@@ -1,0 +1,11 @@
+.sidenav-container {
+    flex: 1;
+    display: flex;
+}
+
+mat-sidenav {
+    width: 250px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
