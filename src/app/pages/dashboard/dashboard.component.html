@@ -1,0 +1,44 @@
+<div class="dashboard-layout">
+    <header class="full-width-header">
+        <mat-icon class="header-icon">dashboard</mat-icon>
+        <h1>Easy Edit Doc App</h1>
+    </header>
+
+    <!-- Sidebar with Menu -->
+    <mat-sidenav-container class="sidenav-container">
+        <mat-sidenav mode="side" opened>
+            <h3>Menu</h3>
+            <button mat-button (click)="addNewDocument()">
+        <mat-icon>note_add</mat-icon> Add New Document
+      </button>
+            <button mat-button (click)="openSettings()">
+        <mat-icon>settings</mat-icon> Settings
+      </button>
+        </mat-sidenav>
+
+        <!-- Main Content Area -->
+        <mat-sidenav-content>
+            <!-- Header with Search Bar -->
+            <header class="dashboard-header">
+                <h1>Dashboard</h1>
+                <mat-form-field appearance="fill">
+                    <mat-label>Search Documents</mat-label>
+                    <input matInput [(ngModel)]="searchText" (input)="filterDocuments()" />
+                </mat-form-field>
+            </header>
+
+            <!-- Document List Display -->
+            <div class="document-list">
+                <mat-card *ngFor="let doc of documents" class="document-item">
+                    <mat-card-title>{{ doc.title }}</mat-card-title>
+                    <mat-card-actions>
+                        <button mat-button (click)="editDocument(doc)">Edit</button>
+                        <button mat-button color="warn" (click)="deleteDocument(doc)">
+              Delete
+            </button>
+                    </mat-card-actions>
+                </mat-card>
+            </div>
+        </mat-sidenav-content>
+    </mat-sidenav-container>
+</div>
