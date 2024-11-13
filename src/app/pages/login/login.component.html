@@ -8,7 +8,7 @@
                     Sign in to access your documents
                 </mat-card-subtitle>
             </mat-card-header>
-            <form (ngSubmit)="onLogin()">
+            <form (ngSubmit)="login()">
                 <mat-form-field appearance="fill" class="full-width">
                     <mat-label>Email</mat-label>
                     <input matInput type="email" required [(ngModel)]="email" name="email" />
@@ -18,7 +18,15 @@
                     <input matInput type="password" required [(ngModel)]="password" name="password" />
                 </mat-form-field>
                 <button mat-fab extended type="submit">Login</button>
-                <button mat-button>Sing Up</button>
+
+                <!-- Google Sign-In Button -->
+                <button mat-fab extended color="primary" (click)="googleSignIn()">
+          Sign in with Google
+        </button>
+                <div class="full-width">
+                    Not have account yet?
+                    <button mat-button>Sing Up</button>
+                </div>
             </form>
         </mat-card-content>
     </mat-card>
